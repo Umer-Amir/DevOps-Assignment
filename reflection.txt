@@ -1,0 +1,9 @@
+This project allowed me to apply Docker concepts in a realistic microservices setup. I chose to build a task manager app with a Node.js backend and a MongoDB database, both running in Docker containers on a custom network. I appreciated how Docker made it easy to separate concerns, containerize each service, and connect them via Docker networking.
+
+One of the main challenges I faced was managing MongoDB authentication and connectivity. At first, my backend couldn’t connect to the database due to URI misconfiguration and volume reuse issues. Debugging those errors deepened my understanding of how services communicate within containers.
+
+For creative enhancements, I implemented four features: custom logging using `docker logs`, a healthcheck in the backend container, manual load balancing with three container instances, and a separate monitor container that auto-restarts the database if it becomes unhealthy. These features showcased Docker’s ability to simplify resilience and observability even without Docker Compose or Kubernetes.
+
+Going forward, this app could be extended with a frontend UI, Nginx as a reverse proxy/load balancer, and a CI/CD pipeline. In production, I would also replace the monitor container with a proper health management tool and store secrets securely using environment configs or Docker secrets.
+
+Overall, this project helped me solidify containerization concepts and gain confidence in deploying modular services using Docker alone.
