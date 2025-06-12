@@ -51,3 +51,8 @@ docker logs backend-1
 ```bash
 docker network create docker-assignment
 ````
+
+### 📦 Docker Hub Repository
+
+You can find the published Docker image here:  
+👉 [bloopse/task-manager on Docker Hub](https://hub.docker.com/r/bloopse/task-manager)
