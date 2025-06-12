@@ -17,25 +17,6 @@ This project is a simple **Task Manager application** built as part of a Docker 
 
 ---
 
-## 🏗️ Architecture
-
-+-------------+ +------------------------+
-| | HTTP/API | |
-| Postman / +----------->+ Node.js Backend API |
-| Browser | | (Express + Mongoose) |
-| | +-----------+------------+
-+-------------+ |
-| MongoDB URI with Auth
-v
-+-----------------------------+
-| MongoDB Docker Container |
-| - Auth enabled (user: umer) |
-| - Volume mounted (/data/db) |
-+-----------------------------+
-
-
----
-
 ## ⚙️ Tech Stack
 
 | Layer     | Technology             |
@@ -47,6 +28,19 @@ v
 | Network   | Docker custom network  |
 
 ---
+
+### 🪵 Creative Enhancement: Custom Logging
+
+We enhanced the backend to log:
+- MongoDB connection success/failure
+- Task creation events
+- Internal server errors
+
+These logs can be viewed using:
+
+```bash
+docker logs backend-1
+
 
 ## 🐳 Docker Setup
 
